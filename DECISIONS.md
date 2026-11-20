@@ -13,3 +13,9 @@
 - Turbopack fails under this execution environment when its CSS worker binds a port. Webpack production build succeeds; use the supported --webpack option. For the kit performance runner, IS_WEBPACK_TEST=1 selects the same bundler without altering the shared script or measurements.
 
 - Installed Neon guidance was consulted, then archived unchanged under node_modules/.consulted-neon-skills as a tooling dependency; its example content is not application source.
+
+- GitHub public creation was rejected by automatic approval review for unspecified public visibility. Created private SayedZahur786/policypilot instead; public source and license remain owner decisions.
+- Neon deploy completed; migration and real-database smoke tests passed. A restricted policypilot_app runtime role is configured separately from the migration owner.
+- Source audit: gitleaks scans authored files and Git history; runtime secret files and dependency/build directories are excluded, then the Git ignore boundary is checked before push.
+
+- Approval review rejected relaxing SameSite=Strict for Stripe return navigation. Retained Strict, added a same-origin session refresh action and a payment-status refresh; no cookie protection was relaxed.
