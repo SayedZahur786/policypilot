@@ -19,6 +19,11 @@ export function proxy(request: NextRequest) {
     "Strict-Transport-Security",
     "max-age=31536000; includeSubDomains",
   );
+  if (
+    request.nextUrl.pathname.startsWith("/api/") ||
+    request.nextUrl.pathname === "/manage"
+  )
+    response.headers.set("Cache-Control", "no-store");
   return response;
 }
 export const config = {

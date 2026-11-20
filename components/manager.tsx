@@ -39,6 +39,17 @@ export function Login() {
     >
       <h2>Welcome back.</h2>
       <p>
+        Returning from checkout? Your secure session can be restored by
+        refreshing this page.
+      </p>
+      <button
+        type="button"
+        className="btn secondary"
+        onClick={() => router.refresh()}
+      >
+        Refresh my session
+      </button>
+      <p>
         Enter the site ID and recovery key saved when you created your policies.
         The key grants editing access: keep it private.
       </p>
@@ -136,6 +147,11 @@ export function Manager({
         </div>
       )}
       <div className="actions">
+        {!site.paid && payments && (
+          <button className="btn secondary" onClick={() => router.refresh()}>
+            Refresh payment status
+          </button>
+        )}
         <button className="btn secondary" onClick={() => setEdit(!edit)}>
           {edit ? "Return to preview" : "Edit answers"}
         </button>

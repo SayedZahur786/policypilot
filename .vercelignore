@@ -1,0 +1,7 @@
+.local
+.env*
+.agents
+docs
+test-results
+playwright-report
+.git
