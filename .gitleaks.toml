@@ -1,0 +1,5 @@
+[extend]
+useDefault = true
+[allowlist]
+description = "Local runtime secrets and installed dependencies are excluded from source scans"
+paths = ['''(^|/)node_modules/''', '''(^|/)\.next/''', '''(^|/)\.local/''', '''(^|/)\.env\.local$''', '''(^|/)\.vercel/''', '''(^|/)test-results/''']

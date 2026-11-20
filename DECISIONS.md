@@ -6,4 +6,10 @@
 - Use capability-based management: a high-entropy recovery key exchanged for an HttpOnly session. Store hashes, never raw credentials. Keys are never accepted in URLs.
 - Paid hosting unlocks only from a verified Stripe event; local simulation requires explicit local mode and cannot run on Vercel.
 - Keep analytics disabled. Week-one counts come from durable site/payment records, not fabricated landing-page counters.
-- GitHub authentication failed: existing CLI token is invalid. Repository creation/push requires renewed login.
+- GitHub authentication succeeds when checked with network access. The earlier sandbox check was misleading; no renewed login is needed.
+
+- Neon project long-tooth-90874557 created exclusively for PolicyPilot in org-sweet-wildflower-67376060 (existing Sayed organization), Singapore region. The CLI has no organization-create command; isolated project scope is preserved.
+- Consulted project-local neon and neon-postgres skills. Keep the already implemented HTTP driver for short queries; migration uses the unpooled URL.
+- Turbopack fails under this execution environment when its CSS worker binds a port. Webpack production build succeeds; use the supported --webpack option. For the kit performance runner, IS_WEBPACK_TEST=1 selects the same bundler without altering the shared script or measurements.
+
+- Installed Neon guidance was consulted, then archived unchanged under node_modules/.consulted-neon-skills as a tooling dependency; its example content is not application source.
