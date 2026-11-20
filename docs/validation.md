@@ -9,6 +9,7 @@ Performed 21 November 2026. All counts below are test evidence, not customer tra
 | Lint and TypeScript | PASS: npm run lint and npm run typecheck. |
 | Production build | PASS: npm run build (Next.js 16.4.6, Webpack). |
 | Real Neon service | PASS: migration, create/read, ownership hash, draft privacy, publish, duplicate receipt, revision update, stable slug and atomic rate-limit checks. Temporary smoke records were removed. |
+| Deployed service flow | PASS: HTTPS intake, secure HttpOnly/Strict session, management render and edit against Neon; signed-out write denied, checkout fails closed without keys, simulation returns 404, unpaid draft stays private. Temporary record removed. |
 | Local browser flow | PASS: ten-question intake, local simulated purchase, hosted policy URL, edit/republish, signed-out denial, hostile origin, invalid input and real 404. Live Stripe purchase is not tested. |
 | Screenshots | PASS: every main route at 1440px desktop and 390px mobile; no horizontal overflow. 24 committed PNGs including private workspace captures with recovery keys hidden. |
 | Placeholder gate | PASS: launch-kit scanner over authored project files. |
@@ -23,3 +24,5 @@ Performance runner used IS_WEBPACK_TEST=1 to select the same bundler as the prod
 
 ## Launch limitations
 The preview is deployed. Commercial launch is not complete: live Stripe credentials and purchase/refund verification, a verified private operator contact, professional clause review, support/retention operations and a restore drill are still needed. Optional recurring maintenance is not offered. GitHub source is private pending an owner visibility/license decision.
+
+Final verified Vercel deployment: dpl_6WyBsgaiA4edYBXUA8VW3WJvQSVU, aliased at https://policypilot-mauve.vercel.app . Production metric query after test cleanup: 0 generated, 0 paid, 0% conversion; goals remain 50, 10 and 20%.

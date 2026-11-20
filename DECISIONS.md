@@ -19,3 +19,5 @@
 - Source audit: gitleaks scans authored files and Git history; runtime secret files and dependency/build directories are excluded, then the Git ignore boundary is checked before push.
 
 - Approval review rejected relaxing SameSite=Strict for Stripe return navigation. Retained Strict, added a same-origin session refresh action and a payment-status refresh; no cookie protection was relaxed.
+
+- Vercel assigned https://policypilot-mauve.vercel.app; APP_URL and launch links use that exact origin. Deployed HTTPS smoke tests passed against real Neon, then removed their temporary records.
